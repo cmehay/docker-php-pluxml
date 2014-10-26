@@ -1,4 +1,4 @@
-FROM petitchevalroux/php-fpm:5.4
+FROM petitchevalroux/php-fpm
 MAINTAINER Patrick Poulain <docker@m41l.me>
 RUN apt-get update
 RUN apt-get -y install git php5-gd

@@ -1,5 +1,5 @@
 nginx:
-    image: petitchevalroux/nginx-php:1.7
+    image: petitchevalroux/nginx-php
     ports:
         - 8080:80
     links:
@@ -7,7 +7,7 @@ nginx:
     volumes_from:
         - php
 php:
-    image: petitchevalroux/php-pluxml:5.3.1
+    image: petitchevalroux/php-pluxml
     expose:
         - 9000
     volumes:
