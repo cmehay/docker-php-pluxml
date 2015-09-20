@@ -1,0 +1,17 @@
+haproxy:
+    image: tutum/haproxy
+    ports:
+        - 80
+    links:
+        - pluxml
+
+pluxml:
+    build: .
+    volumes_from:
+        - pluxmldata
+    environment:
+        VIRTUAL_HOST: http://www.url.fqdn
+
+pluxmldata:
+    build: .
+    command: true
